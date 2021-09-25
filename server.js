@@ -34,6 +34,14 @@ app.get('/', (req, res) => {
   res.send('skeletonni')
 })
 
+app.get('/fibonacci/:amount?', (req, res) => {
+  if (req.params.amount) {
+    res.send(fibonacci(req.params.amount))
+  }
+  res.send(fibonacci(15))
+
+})
+
 app.listen(portti, () => {
   console.log(`servu startannu.... ${portti}`)
 })
