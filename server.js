@@ -80,7 +80,7 @@ app.get('/fibonacci/:amount?', (req, res) => {
 
 app.get('/prime/:until?', (req, res) => {
   if (req.params.until) {
-    res.send(countPrimes(req.params.amount))
+    res.send(countPrimes(req.params.until))
   }
   res.send(countPrimes(15))
 
